@@ -149,7 +149,7 @@ $(REFLEXDICTLIB): $(REFLEXDO) $(ORDER_) $(MAINLIBS) $(REFLEXLIB)
 		"$(SOFLAGS)" libReflexDict.$(SOEXT) $@ "$(REFLEXDO)" \
 		"$(REFLEXDICTLIBEXTRA)"
 
-$(REFLEXDS): $(REFLEXAPIH) $(REFLEXL) $(ROOTCINTTMPEXE)
+$(REFLEXDS): $(REFLEXAPIH) $(REFLEXL) $(ROOTCINTTMPDEP)
 		@echo "Generating dictionary $@..."
 		$(ROOTCINTTMP) -f $@ -c -p -Ireflex/inc $(REFLEXAPIH) $(REFLEXL)
 
@@ -160,7 +160,6 @@ $(REFLEXDICTMAP): $(RLIBMAP) $(MAKEFILEDEP) $(REFLEXL)
 all-reflex:     $(REFLEXLIB) $(REFLEXDICTLIB) $(REFLEXDICTMAP) $(RFLX_GRFLXPYC) $(RFLX_GRFLXPY)
 
 clean-genreflex:
-		@rm -f bin/genreflex*
 		@rm -rf lib/python/genreflex
 
 clean-check-reflex:
