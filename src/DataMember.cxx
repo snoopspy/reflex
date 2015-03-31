@@ -14,6 +14,8 @@
 #define REFLEX_BUILD
 #endif
 
+#include <string.h> // by gilgil for memcpy
+
 #include "DataMember.h"
 
 #include "Reflex/Scope.h"

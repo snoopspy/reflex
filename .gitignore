@@ -1,0 +1,13 @@
+*.o
+*.lo
+*.m4
+*.cache
+
+Makefile*
+config*
+
+.deps/
+config/
+bin/
+include/
+lib/

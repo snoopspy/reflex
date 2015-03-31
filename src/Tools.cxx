@@ -13,6 +13,8 @@
 #define REFLEX_BUILD
 #endif
 
+#include <string.h> // by gilgil for strchr
+
 #include "Reflex/Tools.h"
 
 #include "Reflex/Kernel.h"
