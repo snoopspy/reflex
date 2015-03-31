@@ -1,0 +1,18 @@
+<school>
+  <teachers>
+	<teacher id="1" name="teacher1" age="41" subject = "kor"/>
+	<teacher id="2" name="teacher1" age="41" subject = "eng"/>
+	<teacher id="3" name="teacher1" age="41" subject = "mat"/>
+  </teachers>
+  <students>
+	<student grade="1" group="1" no="1" name="student111" age="17" teacher_id="1"/>
+	<student grade="1" group="1" no="2" name="student112" age="17" teacher_id="1"/>
+	<student grade="1" group="1" no="3" name="student113" age="17" teacher_id="1"/>
+	<student grade="2" group="1" no="1" name="student211" age="18" teacher_id="2"/>
+	<student grade="2" group="1" no="2" name="student212" age="18" teacher_id="2"/>
+	<student grade="2" group="1" no="3" name="student213" age="18" teacher_id="2"/>
+	<student grade="3" group="1" no="1" name="student311" age="19" teacher_id="3"/>
+	<student grade="3" group="1" no="2" name="student312" age="19" teacher_id="3"/>
+	<student grade="3" group="1" no="3" name="student313" age="19" teacher_id="3"/>
+  </students>
+</school>

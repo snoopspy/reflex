@@ -8,7 +8,7 @@ _SRCS = $(wildcard *.c) $(wildcard *.cc) $(wildcard *.cpp)
 _OBJS = $(addsuffix .o,$(basename $(_SRCS)))
 _EXEC = $(shell basename $(PWD))
 
-CPPFLAGS += -Wall -g
+CPPFLAGS += -Wall -g -I/usr/include/libxml2
 
 LDLIBS += -lpthread
 
@@ -38,8 +38,11 @@ temp:
 
 depend: .depend
 
-.depend: myobj.h $(MAKEFILE_LIST)
-	../../bin/genreflex myobj.h
+.depend: person.h school.h teacher.h student.h $(MAKEFILE_LIST)
+	../../bin/genreflex person.h
+	../../bin/genreflex school.h
+	../../bin/genreflex teacher.h
+	../../bin/genreflex student.h
 	rm -f ./.depend
 	$(CXX) $(CPPFLAGS) -MM $(_SRCS) > ./.depend
 
