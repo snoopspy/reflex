@@ -1,2 +1,0 @@
-#!/bin/sh -f
-python /root/proj/etc/reflex/lib/python2.7/site-packages/Reflex/genreflex.py $*

@@ -1,5 +1,7 @@
 .PHONY: all debug release build clean temp depend
 
+_ABS_PATH = $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
+_REL_PATH = ../..
 include ../../reflex.mk
 
 _SRCS = $(wildcard *.c) $(wildcard *.cc) $(wildcard *.cpp)

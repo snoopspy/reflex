@@ -21,7 +21,25 @@ void test()
   }
 }
   Object o = t.Construct();
-  o.Destruct();
+  //o.Destruct();
+  
+  Member dm = t.DataMemberAt(0);
+  std::cout << "Data member " << dm.Name() << " is of type " << dm.TypeOf().Name() << std::endl;
+  int i = Object_Cast<int>(dm.Get(o));
+  ++i;
+  dm.Set(o,&i);
+
+  Member fm = t.FunctionMemberAt(0);
+  if (fm.TypeOf().ReturnType().Name() != "void" && fm.FunctionParameterSize() == 0) Object o = fm.Invoke(o);
+  
+  Scope s = Scope::ByName("MyObj");
+  if ( s.DeclaringScope().IsTopScope()) {
+    std::cout << "Scope " << s.Name() << " is part of the top scope and has " 
+      << s.SubScopeSize() << " sub scopes " << std::endl;
+  }
+  
+  PropertyList p = s.Properties();
+  if (p.HasProperty("Author")) std::cout << "The author of class " << s.Name() << " is " << p.PropertyAsString("Author") << std::endl;
 }
 
 int main()
