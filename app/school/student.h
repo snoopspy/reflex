@@ -3,7 +3,7 @@
 
 #include "person.h"
 
-namespace school {
+namespace sc {
   class student : public person {
   public:
     student();

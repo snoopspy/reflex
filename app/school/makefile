@@ -8,9 +8,9 @@ _SRCS = $(wildcard *.c) $(wildcard *.cc) $(wildcard *.cpp)
 _OBJS = $(addsuffix .o,$(basename $(_SRCS)))
 _EXEC = $(shell basename $(PWD))
 
-CPPFLAGS += -Wall -g -I/usr/include/libxml2
+CPPFLAGS += -std=c++11 -Wall -g -I/usr/include/libxml2
 
-LDLIBS += -lpthread
+LDLIBS += -lxml2 -lglog
 
 all: release
 

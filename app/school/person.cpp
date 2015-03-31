@@ -1,6 +1,6 @@
 #include "person.h"
 
-using namespace school;
+using namespace sc;
 
 person::person()
 {

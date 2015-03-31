@@ -1,6 +1,6 @@
 #include "teacher.h"
 
-using namespace school;
+using namespace sc;
 
 teacher::teacher()
 {

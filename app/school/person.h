@@ -3,7 +3,7 @@
 
 #include <string>
 
-namespace school {
+namespace sc {
   class person
   {
   public:
