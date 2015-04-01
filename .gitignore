@@ -3,11 +3,17 @@
 *.m4
 *.cache
 *.user
+*.la
 
 Makefile*
 config*
+stamp-h1
+libltdl
+libtool
+Module.mk
 
 .deps/
+.libs/
 config/
 bin/
 include/
